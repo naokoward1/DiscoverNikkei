@@ -19,6 +19,7 @@
              <div class="article">
              <h3><a href="{% url 'detail' i.pk %}">{{ i.title }}</a></h3>
                <p>{{ i.body }}</p>
+               <p>Source: {{ i.source }}</p>
             </div>
          {% endfor %}
         {% endblock content %}

@@ -10,13 +10,14 @@
  </head>
  <body>
      <header>
-       <h1> <a href="">Japanese American Activists</a> </h1>
+       <h1> <a href="/">Japanese American Activists</a> </h1>
      </header>
      <div class="container">
      {% block content %}
          <div class="details">
          <h2>{{ article.title }}</h2>
          <p>{{ article.body }}</p>
+         <p>Source: {{ article.source }}</p>
          </div>
      {% endblock content %}
      </div>

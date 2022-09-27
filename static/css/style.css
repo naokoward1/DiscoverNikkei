@@ -1,4 +1,17 @@
 body{
 background-color: #d1d5f2;
 color: #000000;
+margin: 50px;
+}
+
+a:link{
+    color: #1a3e6c
+}
+
+a:visited {
+    color: #4c88d4
+}
+
+div{
+    padding-bottom: 10px;
 }
