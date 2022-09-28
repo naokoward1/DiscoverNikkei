@@ -15,3 +15,7 @@ a:visited {
 div{
     padding-bottom: 10px;
 }
+
+img {
+  max-width: 50%;
+}
