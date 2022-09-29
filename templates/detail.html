@@ -19,6 +19,22 @@
          <p>{{ article.body }}</p>
          <p>Source: {{ article.source }}</p>
          </div>
+         <div>
+        {% if user.is_authenticated %}
+          <form action="{% url 'article_like' article.id %}" method="POST">
+            {% csrf_token %}
+
+            {% if post_is_liked %}
+            <button type="submit" name="article_id" value="{{article.id}}" class="btn btn-info">Unlike</button>
+            {% else %}
+            <button type="submit" name="article_id" value="{{article.id}}" class="btn btn-info">Like</button>
+            {% endif %}
+        </form>
+        {% else %}
+          <a class="btn btn-outline-info" href="{% url 'login' %}?next={{request.path}}">Log in to like this article!</a><br>
+        {% endif %}
+          <class="text-secondary">{{ number_of_likes }} Like{{ number_of_likes|pluralize }}</class="text-secondary">
+        </div>
      {% endblock content %}
      </div>
  </body>
